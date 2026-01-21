@@ -11,6 +11,7 @@ export default function PaginaPadrao() {
         </div>
       </header>
       <div>
+        {/* O <Outlet /> é onde o conteúdo variável aparece. */}
         <Outlet></Outlet>
       </div>
       

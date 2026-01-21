@@ -15,6 +15,7 @@ export default function AppRouter() {
         <Routes>
           {/* Representa a rota pai */}
           <Route path='/' element={<PaginaPadrao/>}>
+            {/* Quando a rota for exatamente / ... Renderize o componente Inicio */}
             <Route index element={<Inicio />} />
             <Route path='cardapio' element={<Cardapio/>} /> 
           </Route>
