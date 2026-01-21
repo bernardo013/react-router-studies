@@ -4,7 +4,7 @@ import styles from './Inicio.module.scss';
 export default function Inicio() {
   const pratosRecomendados = [...Cardapio]
     .sort(() => 0.5 - Math.random())
-    .splice(0, 3);
+    .splice(0,3);
 
   return (
     <section>
