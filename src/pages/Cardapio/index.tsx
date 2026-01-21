@@ -6,15 +6,13 @@ import Filtros from './Filtros';
 import Ordenador from './Ordenador';
 import Itens from './Itens';
 
+
 export default function Cardapio() {
   const [busca, setBusca] = useState('');
   const [filtro, setFiltro] = useState<number | null>(null);
   const [ordenador, setOrdenador] = useState('');
   return (
     <main>
-      <nav className={styles.menu}>
-        <Logo />
-      </nav>
       <header className={styles.header}>
         <div className={styles.header__text}>
           A casa do código e da massa
