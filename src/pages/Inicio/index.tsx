@@ -1,17 +1,17 @@
-import Cardapio from 'data/Cardapio.json';
+import cardapio from 'data/Cardapio.json';
 import styles from './Inicio.module.scss';
 import stylesTema from 'styles/Tema.module.scss';
 import nossaCasa from 'assets/nossa_casa.png';
 import { useNavigate } from 'react-router-dom';
 
 export default function Inicio() {
-  const pratosRecomendados = [...Cardapio]
+  const pratosRecomendados = [...cardapio]
     .sort(() => 0.5 - Math.random())
     .splice(0,3);
   const navigate = useNavigate();
 
-  function redirecionarParaDetalhes(prato: typeof Cardapio[0]) {
-    navigate(`/prato/${prato.id}`, {state: {...prato} });
+  function redirecionarParaDetalhes(prato: typeof cardapio[0]) {
+    navigate(`/prato/${prato.id}`, {state: {...prato}, replace: true});
   }
 
   return (
