@@ -1,9 +1,10 @@
+import React from 'react';
 import styles from './PaginaPadrao.module.scss';
 //Childen do react-router-dom
 import { Outlet } from 'react-router-dom';
 import stylesTema from 'styles/Tema.module.scss';
 
-export default function PaginaPadrao() {
+export default function PaginaPadrao({ children }: {children?: React.ReactNode}) {
   return (
     <>
       <header className={styles.header}>
@@ -14,6 +15,7 @@ export default function PaginaPadrao() {
       <div className={stylesTema.container}>
         {/* O <Outlet /> é onde o conteúdo variável aparece. */}
         <Outlet></Outlet>
+        {children}
       </div>
       
     </>
